@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/fonts/MarvelRegular-Dj83.ttf"
             ],
             "scripts": []
           },

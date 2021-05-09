@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarvelService } from 'src/app/marvel.service';
 
 @Component({
   selector: 'app-personagens-lista',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonagensListaComponent implements OnInit {
 
-  personagens: String[] = ['Homem de Ferro' , 'Capitão América', "Homem Formiga",
-  'Thanos', 'Hulk', 'Homem de Ferro' , 'Capitão América', "Homem Formiga",'Thanos', 'Hulk', 'Homem de Ferro' , 'Capitão América', "Homem Formiga"
-]
+  personagens: any[] = []
 
-  constructor() { }
+  constructor(private marvelService : MarvelService) { }
 
   ngOnInit(): void {
+    this.marvelService.getAllCharacters().subscribe(
+      (response) => { response['data']['results'].forEach( (personagem: any) => {      
+          if(personagem['thumbnail']['path'] != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"){           
+            this.personagens.push(personagem)
+          }
+      })}
+      )  
   }
 
 }

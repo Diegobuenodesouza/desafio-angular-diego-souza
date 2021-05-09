@@ -1,9 +1,16 @@
-<div class="container">    
+<div class="container">     
+    
+    <div style="text-align: center;" >
+        <h2>Lista de Personagens</h2>
+    </div>
+    
     <div *ngFor="let personagem of personagens" class="col-lg-4 col-md-6 col-sm-12  tabela-personagens">
         <div class="card-personagem">
-            <img src="./../../../assets/images/personagem.jfif" alt="">
-            <button class="btn btn-info btn-personagem"> {{ personagem }}</button>
+            <img src="{{ personagem['thumbnail']['path']}}.{{personagem['thumbnail']['extension']}} " alt="foto-personagem">   
+            <button class="btn btn-info btn-personagem" [routerLink]="['/personagem', personagem['id'] ]" routerLinkActive="router-link-active" > {{personagem['name'] }}</button>
         </div>
     </div>
 </div>
+
+
 

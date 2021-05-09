@@ -1,5 +1,4 @@
-h1{
-    
+h1{    
     padding: 15px;
     background-color: #ed1d24;
     color: white;
@@ -8,7 +7,7 @@ h1{
     font-weight: 700;    
     animation: inicio;
     animation-duration: 7s;
-    text-shadow: #232323 3px 3px;
+    text-shadow: #232323 3px 3px;   
 }
 
 

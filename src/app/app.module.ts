@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { PersonagensModule } from './personagens/personagens.module';
 
@@ -18,7 +19,8 @@ import { FooterComponent } from './template/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PersonagensModule
+    PersonagensModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MarvelService } from 'src/app/marvel.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+ 
+    ) { }
+
 
   ngOnInit(): void {
+   
+    
+
   }
 
 }

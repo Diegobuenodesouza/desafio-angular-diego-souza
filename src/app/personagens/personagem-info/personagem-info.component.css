@@ -20,14 +20,13 @@
     text-shadow: 1px 1px white;
     font-size: 18px;
     animation-name: inicio-info;
-    animation-duration: 1s;}
+    animation-duration: 0.8s;}
 
 
 
 @keyframes inicio-info{
     0% {opacity: 0; background-color: black; padding-left: 200px; }    
-    100% { background-color: none;}
-    
+    100% { background-color: none;}    
     
 }
 

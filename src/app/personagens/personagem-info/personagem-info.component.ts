@@ -11,6 +11,7 @@ export class PersonagemInfoComponent implements OnInit {
 
   personagem : any;
   pDescricao: boolean = false;
+  pId: boolean =false;
 
   constructor(
     private router : Router,    
@@ -32,9 +33,15 @@ export class PersonagemInfoComponent implements OnInit {
     this.router.navigate(['/'])
   }
 
+  carregarId():void{
+    setTimeout(() => {
+      this.pId = true      
+    }, 600);
+  }
+
   carregarDescricao():void{
     setTimeout(() => {
       this.pDescricao = true      
-    }, 800);
+    }, 1400);
   }
 }

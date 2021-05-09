@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { PersonagensModule } from './personagens/personagens.module';
 
+
 import { AppComponent } from './app.component';
 import { HomebarComponent } from './template/homebar/homebar.component';
 import { FooterComponent } from './template/footer/footer.component';
@@ -18,7 +19,7 @@ import { FooterComponent } from './template/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     PersonagensModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

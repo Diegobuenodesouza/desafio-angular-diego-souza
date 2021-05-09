@@ -10,6 +10,9 @@ export class PersonagensListaComponent implements OnInit {
 
   personagens: any[] = []
 
+  pagina = 1;
+  contador = 20;
+
   constructor(private marvelService : MarvelService) { }
 
   ngOnInit(): void {
@@ -20,6 +23,7 @@ export class PersonagensListaComponent implements OnInit {
           }
       })}
       )  
+  
   }
 
 }

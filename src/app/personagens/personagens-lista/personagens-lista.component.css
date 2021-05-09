@@ -1,5 +1,5 @@
 .container{
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 }
 
 .tabela-personagens{   
@@ -33,10 +33,21 @@ img:hover{
     box-shadow: 2px 10px 10px 1px #232323;    
 }
 
+.pagination{
+    font-size: 25px;
+    display: inline-block;
+    padding-right: 32px;
+    border: 3px solid rgba(255, 255, 255, 0.705);
+    border-radius: 20px 0px ;   
+    background-image: linear-gradient(to left, rgb(250, 58, 58), white , rgb(250, 58, 58));
+
+    
+}
 .btn-personagem{
     margin: 10px 0px ;
     border: 1px solid black;
 }
+
 
 @media screen and (max-width: 575px) {
    .container{

@@ -15,7 +15,7 @@ export class MarvelService {
   constructor(private http : HttpClient) { }
 
   getAllCharacters(): Observable<any>{
-    return this.http.get<any>(`${this.URL}/characters?ts=${this.ts}&apikey=${this.apiKey}&hash=${this.md5}&limit=50`)
+    return this.http.get<any>(`${this.URL}/characters?ts=${this.ts}&apikey=${this.apiKey}&hash=${this.md5}&limit=100`)
   }
 
   getCharacter(id: number): Observable<any>{

@@ -56,17 +56,16 @@ img{
    
 
 .btn-voltar{
-    
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(248, 245, 52, 0.877);
     margin-top: 15px;
     margin-bottom: 40px;
     letter-spacing: 1.2px;
     color: #232323;
-
+    
 }
 
 .btn-voltar:hover{
-    background-color: rgba(209, 204, 204, 0.877);
+    background-color: rgba(253, 249, 1, 0.877);
 }
 
 @media screen and (max-width: 767px){   

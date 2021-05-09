@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MarvelService } from 'src/app/services/marvel.service';
+import { MarvelService } from 'src/app/core/services/marvel.service';
 
 @Component({
   selector: 'app-personagens-lista',

@@ -34,12 +34,12 @@ img:hover{
 }
 
 .pagination{
-    font-size: 25px;
+    font-size: 20px;
     display: inline-block;
     padding-right: 32px;
     border: 3px solid rgba(255, 255, 255, 0.705);
     border-radius: 20px 0px ;   
-    background-image: linear-gradient(to left, rgb(250, 58, 58), white , rgb(250, 58, 58));
+    background-image: linear-gradient(to left, #232323c2, rgba(248, 145, 145, 0.863), white , rgba(248, 145, 145, 0.863),  #232323c2);
 
     
 }

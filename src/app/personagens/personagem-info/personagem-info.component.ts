@@ -19,7 +19,6 @@ export class PersonagemInfoComponent implements OnInit {
     private marvelService : MarvelService) { }
 
   ngOnInit(): void {
-    this.pDescricao = false;
     this.activatedRoute.params.subscribe((parametro : Params) => {
       this.marvelService.getCharacter(parametro.id).subscribe(
       (response) => {this.personagem = response['data']['results'][0],

@@ -1,17 +1,17 @@
 <div class="container">
     
-    <div style="text-align: center;" > 
-        <h2>{{ personagem['name'] }} </h2>
+    <div class="titulo" > 
+        <h2> {{ personagem['name'] }} </h2>
     </div>
     
     
     <div class="row dados">
         <div class="col-md-7 info-dados lado-esquerdo "  >
             
-            <p class="info">ID: # {{ personagem.id }} </p>         
-            <p class="info">Descrição: {{ personagem['description'] }} </p>
-            <p class="info">Dados: </p>
-            
+            <p class="info">ID: #  {{ personagem['id'] }} </p>   
+          <p style="opacity: 0;" class="info" *ngIf="!pDescricao"> x </p>
+            {{ carregarDescricao() }}     
+            <p class="info descricao-info" *ngIf="pDescricao"> Description: {{ personagem['description'] }}</p>            
             <button class="btn btn-personagem ">HQ mais valiosa</button>
         </div>
         

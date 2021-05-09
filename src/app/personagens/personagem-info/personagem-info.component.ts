@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { MarvelService } from 'src/app/marvel.service';
+import { MarvelService } from 'src/app/services/marvel.service';
 
 @Component({
   selector: 'app-personagem-info',
@@ -10,6 +10,7 @@ import { MarvelService } from 'src/app/marvel.service';
 export class PersonagemInfoComponent implements OnInit {
 
   personagem : any;
+  pDescricao: boolean = false;
 
   constructor(
     private router : Router,    
@@ -17,6 +18,7 @@ export class PersonagemInfoComponent implements OnInit {
     private marvelService : MarvelService) { }
 
   ngOnInit(): void {
+    this.pDescricao = false;
     this.activatedRoute.params.subscribe((parametro : Params) => {
       this.marvelService.getCharacter(parametro.id).subscribe(
       (response) => {this.personagem = response['data']['results'][0],
@@ -28,5 +30,11 @@ export class PersonagemInfoComponent implements OnInit {
 
   voltarParaLista(): void{
     this.router.navigate(['/'])
+  }
+
+  carregarDescricao():void{
+    setTimeout(() => {
+      this.pDescricao = true      
+    }, 800);
   }
 }

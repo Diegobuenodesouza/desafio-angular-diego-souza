@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MarvelService } from './marvel.service';
+import { MarvelService } from './services/marvel.service';
 
 describe('MarvelService', () => {
   let service: MarvelService;

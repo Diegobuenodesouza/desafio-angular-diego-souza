@@ -5,14 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { PersonagensModule } from './personagens/personagens.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { HomebarComponent } from './template/homebar/homebar.component';
 import { FooterComponent } from './template/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HomebarComponent,
     FooterComponent
   ],

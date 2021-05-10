@@ -37,3 +37,14 @@ h2{
     display: inline;
     border-radius: 30px;
 }
+
+
+.texto{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical ;
+    text-align: justify;
+}
+

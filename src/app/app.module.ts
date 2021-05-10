@@ -8,6 +8,7 @@ import { PersonagensModule } from './personagens/personagens.module';
 import { AppComponent } from './app.component';
 import { HomebarComponent } from './template/homebar/homebar.component';
 import { FooterComponent } from './template/footer/footer.component';
+import { ComicsModule } from './comics/comics.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { FooterComponent } from './template/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PersonagensModule,
     HttpClientModule,
+    PersonagensModule,
+    ComicsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

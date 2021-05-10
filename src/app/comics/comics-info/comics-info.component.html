@@ -1,0 +1,29 @@
+<div class="container" *ngIf="comicMaisCaro"  >
+
+    <div class="row">
+        <div class="col-md-12" >
+            <p><b>Title:</b> {{ comicMaisCaro['title'] }}</p>         
+            <p class="texto"><b>Description:</b> {{ comicMaisCaro['description'] }}</p>         
+            <p><b>Price:</b> {{ comicMaisCaro['prices'][0]['price'] |  currency  }}</p>
+         
+        </div>
+    </div>
+    
+    <div class="row" style="text-align: center;">
+        <div class="col-md-12">
+            <img src="{{ comicMaisCaro['thumbnail']['path']}}.{{comicMaisCaro['thumbnail']['extension'] }}" alt="">
+        </div>
+    </div>    
+</div>
+
+<div class="container" *ngIf="!comicMaisCaro">
+    <div class="alert alert-danger" style="text-align: center;" role="alert">
+        Personagem sem dados de HQ
+      </div>
+</div>
+
+
+
+
+
+

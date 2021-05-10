@@ -27,20 +27,8 @@ export class PersonagemInfoComponent implements OnInit {
       })    
   }
 
-
   voltarParaLista(): void{
     this.router.navigate(['/'])
   }
 
-  carregarId():void{
-    setTimeout(() => {
-      this.pId = true      
-    }, 600);
-  }
-
-  carregarDescricao():void{
-    setTimeout(() => {
-      this.pDescricao = true      
-    }, 1400);
-  }
 }

@@ -18,25 +18,8 @@
     letter-spacing: 1.4px;
     font-weight: 900;
     text-shadow: 1px 1px white;
-    font-size: 18px;
-    animation-name: inicio-info;
-    animation-duration: 0.8s;}
+    font-size: 18px;}
 
-.texto{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical ;
-}
-
-
-
-@keyframes inicio-info{
-    0% {opacity: 0; background-color: black; padding-left: 200px; }    
-    100% { background-color: none;}    
-    
-}
 
 .lado-esquerdo{
     border-radius:60px 0px 0px 60px;
@@ -72,8 +55,19 @@ img{
     
 }
 
+.money{
+    color: rgb(26, 160, 26);    
+}
+
 .btn-voltar:hover{
     background-color: rgba(253, 249, 1, 0.877);
+}
+
+.modal-body, .modal-header{
+    color: black;
+    font-weight: 700;
+    background-image: linear-gradient(to left, #dab0b0b4, white, #dab0b0b4 );
+    letter-spacing: 1.2px;
 }
 
 @media screen and (max-width: 767px){   
@@ -97,10 +91,7 @@ img{
         width: 100%;
         height: 80%;
         border-radius:0px 0px 60px 60px;
-    }
-
-
-  
+    } 
 }
    
 

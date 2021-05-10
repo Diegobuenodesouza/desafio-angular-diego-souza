@@ -22,6 +22,14 @@
     animation-name: inicio-info;
     animation-duration: 0.8s;}
 
+.texto{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical ;
+}
+
 
 
 @keyframes inicio-info{

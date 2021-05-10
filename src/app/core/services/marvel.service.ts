@@ -21,4 +21,6 @@ export class MarvelService {
   getCharacter(id: number): Observable<any>{
     return this.http.get<any[]>(`${this.URL}/characters/${id}?ts=${this.ts}&apikey=${this.apiKey}&hash=${this.md5}`)
   }
+
+  
 }

@@ -17,10 +17,10 @@
             {{ carregarDescricao() }}     
            
             <p class="info descricao-info" *ngIf="personagem['description'] == '' && pDescricao" > Description: Character without description</p>  
-            <p class="info descricao-info" *ngIf="personagem['description'] != '' && pDescricao " > Description: {{ personagem['description'] }}</p>  
+            <p class="info descricao-info texto" *ngIf="personagem['description'] != '' && pDescricao " > Description: {{ personagem['description'] }}</p>  
 
 
-            <button class="btn btn-personagem ">HQ mais valiosa</button>
+            <button class="btn btn-personagem "> <i class="far fa-money-bill-alt" style="font-size: 25px;"></i> <b> HQ mais valiosa </b></button>
         </div>
         
         <div class="col-md-4 info-dados lado-direito " >          

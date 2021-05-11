@@ -25,10 +25,11 @@ export class PersonagensListaComponent implements OnInit {
     this.marvelService.getAllCharacters().subscribe(
       (response) => {
         this.load = false, 
-        response['data']['results'].forEach( (personagem: any) => {      
-          if(personagem['thumbnail']['path'] != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"){           
+        response.forEach( (personagem: any) => {      
+          if(personagem.thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"){           
             this.personagens.push(personagem)
           }          
+          
       }
       )
     },  (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}

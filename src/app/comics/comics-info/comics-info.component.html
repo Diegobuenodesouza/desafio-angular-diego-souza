@@ -3,12 +3,12 @@
     <div class="row">
 
         <div class="col-md-12" >
-            <p><b>Title:</b> {{ comicMaisCaro['title'] }}</p>         
-            <p class="texto"><b>Description:</b> {{ comicMaisCaro['description'] }}</p>         
+            <p><b>Title:</b> {{ comicMaisCaro.title }}</p>         
+            <p class="texto"><b>Description:</b> {{ comicMaisCaro.description }}</p>         
             <p>
-                <b>Price:</b> <u>{{ comicMaisCaro['prices'][0]['price'] |  currency  }}</u>
+                <b>Printed version price: </b> <u>{{ comicMaisCaro.prices[0].price |  currency  }}</u>
                 <b> - Value Dollar: </b>   <u>{{ valorEmReais |  currency : "BRL" }}  </u>
-                <b>- Price in reais: </b> <u>{{  valorEmReais * comicMaisCaro['prices'][0]['price'] | currency : "BRL"}}</u>
+                <b>- Price in reais: </b> <u>{{  valorEmReais * comicMaisCaro.prices[0].price | currency : "BRL"}}</u>
             </p>
          
         </div>
@@ -16,7 +16,7 @@
     
     <div class="row" style="text-align: center;">
         <div class="col-md-12">
-            <img src="{{ comicMaisCaro['thumbnail']['path']}}.{{comicMaisCaro['thumbnail']['extension'] }}" alt="">
+            <img src="{{ comicMaisCaro.thumbnail.path}}.{{comicMaisCaro.thumbnail.extension }}" alt="">
         </div>
     </div>    
 </div>

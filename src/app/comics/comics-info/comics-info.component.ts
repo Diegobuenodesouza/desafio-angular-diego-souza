@@ -15,10 +15,7 @@ export class ComicsInfoComponent implements OnInit {
 
   comicMaisCaro : any;
   dolar : Dolar = new Dolar();  
-  valorEmReais = 0;
-  
-
-  
+  valorEmReais = 0;  
 
   constructor(
     private dolarService : DolarService,
@@ -30,10 +27,13 @@ export class ComicsInfoComponent implements OnInit {
     (parametro : Params) => {
       this.marvelService.getComicsCharacterById(parametro.id).subscribe(
         (response) => { 
-          this.comicMaisCaro = response['data']['results'][0],                  
-          response['data']['results'].forEach((comic: any) => {
-            if (comic['prices'][0]['price'] > this.comicMaisCaro['prices'][0]['price']){
-              this.comicMaisCaro = comic}  
+
+          this.comicMaisCaro = response[0], 
+
+          response.forEach((comic: any) => {
+           if(comic.prices[0].price  > this.comicMaisCaro.prices[0].price){
+             this.comicMaisCaro = comic
+           }
           });
       })  
     })

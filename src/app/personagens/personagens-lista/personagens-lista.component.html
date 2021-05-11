@@ -3,7 +3,7 @@
 <div class="container">     
     
     <div class="titulo">
-        <h2>Lista de Personagens</h2>
+        <h2> Character List</h2>
     </div>
     
 
@@ -13,8 +13,8 @@
 
     <div *ngFor="let personagem of personagens |  paginate: { itemsPerPage: contador, currentPage: pagina }" class="col-lg-4 col-md-6 col-sm-12  tabela-personagens">
         <div class="card-personagem">
-            <img src="{{ personagem['thumbnail']['path']}}.{{personagem['thumbnail']['extension']}} " alt="foto-personagem">   
-            <button class="btn btn-info btn-personagem" [routerLink]="['/personagem', personagem['id'] ]" routerLinkActive="router-link-active" > {{personagem['name'] }}</button>
+            <img src="{{ personagem.thumbnail.path}}.{{personagem.thumbnail.extension}} " alt="foto-personagem">   
+            <button class="btn btn-info btn-personagem" [routerLink]="['/personagem', personagem.id ]" routerLinkActive="router-link-active" > {{personagem.name }}</button>
         </div>
     </div>
     

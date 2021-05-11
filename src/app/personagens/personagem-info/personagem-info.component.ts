@@ -23,7 +23,7 @@ export class PersonagemInfoComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((parametro : Params) => {
       this.marvelService.getCharacter(parametro.id).subscribe(
-      (response) => {this.personagem = response['data']['results'][0]
+      (response) => { this.personagem = response[0]
         },
         (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}
         `), this.validacaoErro = true }

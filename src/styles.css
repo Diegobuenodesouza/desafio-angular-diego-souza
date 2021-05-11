@@ -2,7 +2,7 @@
 body{
     margin-top: 5px;
     font-family: 'Marvel', sans-serif;
-    background-image: url('./assets/images/manopla_do_infinito.png');
+    background-image: linear-gradient(to bottom left, #6d6b6bd2, rgba(255, 255, 255, 0.76));
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;   
@@ -46,5 +46,14 @@ h2{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical ;
     text-align: justify;
+}
+
+.btn-voltar{
+    background-color: rgba(248, 245, 52, 0.877);
+    margin-top: 15px;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+    color: #232323;
+    
 }
 

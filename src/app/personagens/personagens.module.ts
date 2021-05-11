@@ -6,6 +6,8 @@ import { ComicsModule } from '../comics/comics.module';
 import { PersonagensRoutingModule } from './personagens-routing.module';
 import { PersonagensListaComponent } from './personagens-lista/personagens-lista.component';
 import { PersonagemInfoComponent } from './personagem-info/personagem-info.component';
+import { LoadComponent } from '../template/load/load.component';
+import { ErrosApiComponent } from '../template/erros-api/erros-api.component';
 
 
 
@@ -13,6 +15,8 @@ import { PersonagemInfoComponent } from './personagem-info/personagem-info.compo
   declarations: [
     PersonagensListaComponent,
     PersonagemInfoComponent,  
+    LoadComponent,
+    ErrosApiComponent
      
   ],
   imports: [
@@ -23,7 +27,7 @@ import { PersonagemInfoComponent } from './personagem-info/personagem-info.compo
     
   ],
   exports: [
-    PersonagensListaComponent, 
+    PersonagensListaComponent, PersonagemInfoComponent, ErrosApiComponent, LoadComponent, 
   ]
 })
 export class PersonagensModule { }

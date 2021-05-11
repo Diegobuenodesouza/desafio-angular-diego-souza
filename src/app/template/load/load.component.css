@@ -1,0 +1,13 @@
+.load {
+    top: 35%;
+    left: 45%;
+    position: absolute;
+    color: red;
+}
+
+p{
+   padding-left: 16px;
+   margin-top: 5px;
+   font-size: 17px;
+   font-weight: 700;
+}

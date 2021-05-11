@@ -46,18 +46,7 @@ img{
     opacity: 0.9;}
    
 
-.btn-voltar{
-    background-color: rgba(248, 245, 52, 0.877);
-    margin-top: 15px;
-    margin-bottom: 40px;
-    letter-spacing: 1.2px;
-    color: #232323;
-    
-}
 
-.money{
-    color: rgb(26, 160, 26);    
-}
 
 .btn-voltar:hover{
     background-color: rgba(253, 249, 1, 0.877);

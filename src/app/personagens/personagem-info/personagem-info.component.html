@@ -1,34 +1,34 @@
+
+
+<app-erros-api  *ngIf="validacaoErro " ></app-erros-api>
+
 <div class="container" *ngIf="personagem">
-    
+
     <div class="titulo" > 
         <h2> Personagem </h2>
-    </div>
-    
+    </div>    
     
     <div class="row dados">
         <div class="col-md-7 info-dados lado-esquerdo info"  >
             <p >Name: {{ personagem['name'] }} </p>
             <p >ID: #  {{ personagem['id'] }} </p>             
             <p *ngIf="personagem['description'] == ''" > Description: Character without description</p>  
-            <p *ngIf="personagem['description'] != '' " > Description: {{ personagem['description'] }}</p>  
-            
-            
-            <button class="btn btn-personagem" data-bs-toggle="modal" data-bs-target="#comics" > <i class="far fa-money-bill-alt money" style="font-size: 25px;"></i> <b> HQ mais cara </b></button>
+            <p *ngIf="personagem['description'] != '' " class="texto"> Description: {{ personagem['description'] }}</p>  
+        
+            <button class="btn btn-personagem" data-bs-toggle="modal" data-bs-target="#comics" > <i class="far fa-money-bill-alt " style="font-size: 25px;"></i> <b> HQ mais cara </b></button>
         </div>
         
         <div class="col-md-4 info-dados lado-direito " >          
             <img src="{{ personagem['thumbnail']['path']}}.{{personagem['thumbnail']['extension']}} " alt="foto-personagem">           
         </div>
-    </div>
-    
-    
-    <div class="row" style="text-align: center;">
-        <div class="col-md-12">
-            <button class="btn btn-voltar btn-lg" (click)="voltarParaLista()"  > Voltar</button>
-        </div>
-    </div>
+    </div>      
 </div>
 
+<div class="row" style="text-align: center;">
+    <div class="col-md-12">
+        <button class="btn btn-voltar btn-lg" (click)="voltarParaLista()"  > Voltar</button>
+    </div>
+</div>
 
 <div class="modal fade" id="comics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -43,3 +43,4 @@
         </div>
     </div>
 </div>
+

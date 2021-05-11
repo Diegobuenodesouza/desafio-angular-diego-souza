@@ -13,6 +13,8 @@ export class PersonagemInfoComponent implements OnInit {
   pDescricao: boolean = false;
   pId: boolean =false;
 
+  validacaoErro = false;
+
   constructor(
     private router : Router,    
     private activatedRoute :  ActivatedRoute,
@@ -22,7 +24,9 @@ export class PersonagemInfoComponent implements OnInit {
     this.activatedRoute.params.subscribe((parametro : Params) => {
       this.marvelService.getCharacter(parametro.id).subscribe(
       (response) => {this.personagem = response['data']['results'][0]
-        }
+        },
+        (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}
+        `), this.validacaoErro = true }
         )      
       })    
   }

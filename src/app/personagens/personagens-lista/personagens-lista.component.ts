@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MarvelService } from 'src/app/core/services/marvel.service';
 
 @Component({
@@ -13,17 +14,29 @@ export class PersonagensListaComponent implements OnInit {
   pagina = 1;
   contador = 20;
 
-  constructor(private marvelService : MarvelService) { }
+  validacaoErro = false;
+  load = true;
+
+  constructor(
+    private router : Router,    
+    private marvelService : MarvelService) { }
 
   ngOnInit(): void {
     this.marvelService.getAllCharacters().subscribe(
-      (response) => { response['data']['results'].forEach( (personagem: any) => {      
+      (response) => {
+        this.load = false, 
+        response['data']['results'].forEach( (personagem: any) => {      
           if(personagem['thumbnail']['path'] != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"){           
             this.personagens.push(personagem)
-          }
-      })}
-      )  
-  
+          }          
+      }
+      )
+    },  (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}
+    `), this.validacaoErro = true , this.load = false })  
+  }
+
+  voltarParaLista(): void{
+    this.router.navigate(['/'])
   }
 
 }

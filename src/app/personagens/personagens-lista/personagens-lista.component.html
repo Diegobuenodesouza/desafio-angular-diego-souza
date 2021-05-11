@@ -1,9 +1,16 @@
+
+
 <div class="container">     
     
     <div class="titulo">
         <h2>Lista de Personagens</h2>
     </div>
     
+
+    <app-erros-api *ngIf="validacaoErro"></app-erros-api>
+
+    <app-load *ngIf="load" ></app-load>
+
     <div *ngFor="let personagem of personagens |  paginate: { itemsPerPage: contador, currentPage: pagina }" class="col-lg-4 col-md-6 col-sm-12  tabela-personagens">
         <div class="card-personagem">
             <img src="{{ personagem['thumbnail']['path']}}.{{personagem['thumbnail']['extension']}} " alt="foto-personagem">   

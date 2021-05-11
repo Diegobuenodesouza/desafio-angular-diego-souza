@@ -1,6 +1,10 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { DolarService } from 'src/app/core/services/dolar.service';
 import { MarvelService } from 'src/app/core/services/marvel.service';
+import { Dolar } from 'src/app/shared/models/dolar';
+
 
 @Component({
   selector: 'app-comics-info',
@@ -10,8 +14,14 @@ import { MarvelService } from 'src/app/core/services/marvel.service';
 export class ComicsInfoComponent implements OnInit {
 
   comicMaisCaro : any;
+  dolar : Dolar = new Dolar();  
+  valorEmReais = 0;
+  
+
+  
 
   constructor(
+    private dolarService : DolarService,
     private activatedRoute: ActivatedRoute,
     private marvelService : MarvelService) { }
 
@@ -20,21 +30,19 @@ export class ComicsInfoComponent implements OnInit {
     (parametro : Params) => {
       this.marvelService.getComicsCharacterById(parametro.id).subscribe(
         (response) => { 
-
-          this.comicMaisCaro = response['data']['results'][0],
-                  
+          this.comicMaisCaro = response['data']['results'][0],                  
           response['data']['results'].forEach((comic: any) => {
             if (comic['prices'][0]['price'] > this.comicMaisCaro['prices'][0]['price']){
-              this.comicMaisCaro = comic 
-            }    
-                 
+              this.comicMaisCaro = comic}  
           });
-      
       })  
-
     })
 
-    
+    this.dolarService.getDolarAtual().subscribe(
+      (response : any) => { this.dolar = response[0],
+       this.valorEmReais =  Number(this.dolar.ask)
+    }
+    )
   }
 
 }

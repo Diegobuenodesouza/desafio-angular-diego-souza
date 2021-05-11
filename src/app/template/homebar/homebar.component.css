@@ -6,7 +6,7 @@ h1{
     font-family: 'Marvel', sans-serif;
     font-weight: 700;    
     animation: inicio;
-    animation-duration: 7s;
+    animation-duration: 3s;
     text-shadow: #232323 3px 3px;   
 }
 

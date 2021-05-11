@@ -2,11 +2,18 @@
     margin-bottom: 130px;
 }
 
+
 .tabela-personagens{   
     display: inline-block;
     text-align: center; 
     margin-top: 15px;
     opacity: 0.95;
+    animation-name: inicio;
+    animation-duration: 1.5s;
+}
+
+@keyframes inicio {
+    0%{padding-top:100%;}
     
 }
 

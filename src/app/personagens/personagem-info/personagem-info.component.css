@@ -1,4 +1,14 @@
 .dados{
+    animation-duration: 1s;
+    animation-name: top;
+}
+
+@keyframes top {
+    0% {padding-left: 100%;}
+}
+
+.dados{
+  
     margin-top: 30px;
     margin-bottom: 0px;
 }

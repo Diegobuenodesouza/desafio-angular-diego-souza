@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomebarComponent } from './template/homebar/homebar.component';
 import { FooterComponent } from './template/footer/footer.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

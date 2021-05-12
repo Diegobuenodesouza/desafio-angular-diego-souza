@@ -20,9 +20,9 @@ import { ErrosApiComponent } from '../template/erros-api/erros-api.component';
 
   ],
   imports: [
+    NgxPaginationModule,
     CommonModule,
     PersonagensRoutingModule,
-    NgxPaginationModule,
     ComicsModule
   ],
   exports: [

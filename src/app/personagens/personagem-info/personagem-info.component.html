@@ -15,7 +15,7 @@
             <p *ngIf="personagem.description == ''" > Description: Character without description</p>  
             <p *ngIf="personagem.description != '' " class="texto"> Description: {{ personagem.description }}</p>  
         
-            <button class="btn btn-personagem" data-bs-toggle="modal" data-bs-target="#comics" > <i class="far fa-money-bill-alt " style="font-size: 25px;"></i> <b> HQ mais cara </b></button>
+            <button class="btn btn-personagem" data-bs-toggle="modal" data-bs-target="#comics" > <i class="far fa-money-bill-alt " style="font-size: 25px;"></i> <b> Most expensive HQ</b></button>
         </div>
         
         <div class="col-md-4 info-dados lado-direito " >          
@@ -26,7 +26,7 @@
 
 <div class="row" style="text-align: center;">
     <div class="col-md-12">
-        <button class="btn btn-voltar btn-lg" (click)="voltarParaLista()"  > Voltar</button>
+        <button class="btn btn-voltar btn-lg" (click)="voltarParaLista()"  > Back </button>
     </div>
 </div>
 

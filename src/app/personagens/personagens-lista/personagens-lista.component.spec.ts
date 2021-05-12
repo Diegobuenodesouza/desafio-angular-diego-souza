@@ -2,6 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ToastrModule } from 'ngx-toastr';
 
 import { PersonagensListaComponent } from './personagens-lista.component';
 
@@ -14,7 +15,8 @@ describe('PersonagensListaComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        ToastrModule.forRoot()
       ],
       declarations: [ PersonagensListaComponent ]
     })

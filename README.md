@@ -7,7 +7,7 @@
     <ol>
         <li> - Listagem de personagens:</li>
         <ul>
-           <li>Faça o consumo da API de listagem de personagens: "/v1/public/characters"</li>
+           <li>Faça o consumo da API de listagem de personagens: "/v1/public/characters" Limit 100</li>
             <li>Exiba o nome e foto de cada personagem;</li>
             <li>Ao selecionar o personagem, deverá direcionar para a tela de detalhes.</li>
         </ul>

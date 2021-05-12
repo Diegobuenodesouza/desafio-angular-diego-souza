@@ -23,21 +23,26 @@ export class ComicsInfoComponent implements OnInit {
     private marvelService: MarvelService) { }
 
   ngOnInit(): void {
+    this.getComicId();
+    this.getDolar();
+  }
+
+  getComicId(): void{
     this.activatedRoute.params.subscribe(
-    (parametro: Params) => {
-      this.marvelService.getComicsCharacterById(parametro.id).subscribe(
-        (response) => {
-
-          this.comicMaisCaro = response[0],
-
-          response.forEach((comic: any) => {
-           if (comic.prices[0].price > this.comicMaisCaro.prices[0].price){
-             this.comicMaisCaro = comic;
-           }
-          });
+      (parametro: Params) => {
+        this.marvelService.getComicsCharacterById(parametro.id).subscribe(
+          (response) => {
+            this.comicMaisCaro = response[0],
+            response.forEach((comic: any) => {
+             if (comic.prices[0].price > this.comicMaisCaro.prices[0].price){
+               this.comicMaisCaro = comic;
+             }
+            });
+        });
       });
-    });
+  }
 
+  getDolar(): void{
     this.dolarService.getDolarAtual().subscribe(
       (response: any) => { this.dolar = response[0],
        this.valorEmReais =  Number(this.dolar.ask);

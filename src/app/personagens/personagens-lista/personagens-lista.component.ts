@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { MarvelService } from 'src/app/core/services/marvel.service';
 
 @Component({
@@ -19,9 +20,14 @@ export class PersonagensListaComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private toastr: ToastrService,
     private marvelService: MarvelService) { }
 
   ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll(): void{
     this.marvelService.getAllCharacters().subscribe(
       (response) => {
         this.load = false,
@@ -31,9 +37,9 @@ export class PersonagensListaComponent implements OnInit {
           }
       }
       );
-    },  (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}
-    `), this.validacaoErro = true , this.load = false; });
+    },  () => { this.toastr.warning('Algo deu errado, verifique sua internet', 'Erro') , this.validacaoErro = true , this.load = false; });
   }
+
 
   voltarParaLista(): void{
     this.router.navigate(['/']);

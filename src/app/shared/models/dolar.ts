@@ -10,5 +10,5 @@ export class Dolar {
         bid?: string;
         ask?: string;
         timestamp?: string;
-        create_date?: string;
+        createDate?: string;
 }

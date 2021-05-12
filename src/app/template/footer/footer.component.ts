@@ -7,17 +7,10 @@ import { MarvelService } from 'src/app/core/services/marvel.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
+
 export class FooterComponent implements OnInit {
 
-  constructor(
- 
-    ) { }
+  constructor() { }
 
-
-  ngOnInit(): void {
-   
-    
-
-  }
-
+  ngOnInit(): void { }
 }

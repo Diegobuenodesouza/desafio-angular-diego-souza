@@ -9,7 +9,7 @@ import { MarvelService } from 'src/app/core/services/marvel.service';
 })
 export class PersonagensListaComponent implements OnInit {
 
-  personagens: any[] = []
+  personagens: any[] = [];
 
   pagina = 1;
   contador = 20;
@@ -18,26 +18,25 @@ export class PersonagensListaComponent implements OnInit {
   load = true;
 
   constructor(
-    private router : Router,    
-    private marvelService : MarvelService) { }
+    private router: Router,
+    private marvelService: MarvelService) { }
 
   ngOnInit(): void {
     this.marvelService.getAllCharacters().subscribe(
       (response) => {
-        this.load = false, 
-        response.forEach( (personagem: any) => {      
-          if(personagem.thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"){           
-            this.personagens.push(personagem)
-          }          
-          
+        this.load = false,
+        response.forEach( (personagem: any) => {
+          if (personagem.thumbnail.path !== 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'){
+            this.personagens.push(personagem);
+          }
       }
-      )
+      );
     },  (erroResponse) => { alert(`**Error**\nCode: ${erroResponse.error.code}\nStatus: ${erroResponse.error.status}
-    `), this.validacaoErro = true , this.load = false })  
+    `), this.validacaoErro = true , this.load = false; });
   }
 
   voltarParaLista(): void{
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
 
 }

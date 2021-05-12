@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,12 +6,11 @@ import { Router } from '@angular/router';
   templateUrl: './erros-api.component.html',
   styleUrls: ['./erros-api.component.css']
 })
-export class ErrosApiComponent implements OnInit { 
- 
-  constructor(private router : Router, ) { }
+export class ErrosApiComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
+  constructor(private router: Router ) { }
+
+  ngOnInit(): void {  }
 
 
 }

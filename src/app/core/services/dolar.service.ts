@@ -9,7 +9,7 @@ import { Dolar } from 'src/app/shared/models/dolar';
 export class DolarService {
 
   constructor(private http: HttpClient) { }
-  URL = 'https://economia.awesomeapi.com.br/USD-BRL/'
+  URL = 'https://economia.awesomeapi.com.br/USD-BRL/';
 
   getDolarAtual(): Observable<Dolar>{
     return this.http.get<Dolar>(this.URL);

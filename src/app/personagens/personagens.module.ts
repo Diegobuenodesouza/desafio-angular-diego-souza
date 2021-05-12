@@ -14,20 +14,18 @@ import { ErrosApiComponent } from '../template/erros-api/erros-api.component';
 @NgModule({
   declarations: [
     PersonagensListaComponent,
-    PersonagemInfoComponent,  
+    PersonagemInfoComponent,
     LoadComponent,
     ErrosApiComponent
-     
+
   ],
   imports: [
     CommonModule,
     PersonagensRoutingModule,
     NgxPaginationModule,
     ComicsModule
-    
   ],
   exports: [
-    PersonagensListaComponent, PersonagemInfoComponent, ErrosApiComponent, LoadComponent, 
-  ]
+    PersonagensListaComponent, PersonagemInfoComponent, ErrosApiComponent, LoadComponent]
 })
 export class PersonagensModule { }
